@@ -1,0 +1,5 @@
+# 301 Redirect
+/netlify/*  https://www.google.com/search?q=:splat  301
+
+# Proxy Redirect
+/netlify/*  https://www.google.com/search?q=:splat  200
