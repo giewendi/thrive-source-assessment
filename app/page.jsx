@@ -20,8 +20,8 @@ const qna = [
             {
                 heading: 'Challenge',
                 points: [
-                    'The main setup consideration was ensuring the correct build configuration for a Next.js project.',
-                    'I verified the build command and settings, then triggered a fresh build to resolve the issue and deploy successfully.'
+                    'Dependency Vulnerabilities: The starter template introduced outdated packages with known security vulnerabilities.',
+                    'Resolution: Performed a dependency audit, applied security patches and version upgrades, and validated that the application built and deployed successfully without breaking changes.'
                 ]
             }
         ]
@@ -35,10 +35,10 @@ const qna = [
             {
                 heading: 'What impressed me',
                 points: [
-                    'Ease of use: The platform is very intuitive and quick to set up, even for a new project.',
-                    'Instant deployment: The Git-based workflow is seamless — pushing to GitHub automatically builds and deploys the site.',
-                    'Deploy previews: Automatic previews for pull requests make testing changes straightforward.',
-                    'Edge Functions: Serverless functions integrate smoothly without requiring complex configuration.'
+                    '**Ease of use**: The platform is very intuitive and quick to set up, even for a new project.',
+                    '**Instant deployment**: The Git-based workflow is seamless — pushing to GitHub automatically builds and deploys the site.',
+                    '**Deploy previews**: Automatic previews for pull requests make testing changes straightforward.',
+                    '**Edge Functions**: Serverless functions integrate smoothly without requiring complex configuration.'
                 ]
             },
             {
@@ -81,15 +81,15 @@ const qna = [
         id: 4,
         question:
             'Provide a link to documentation for a technical/developer-focused product, which you think are well done, and explain why.',
-        answer: ['Documentation: https://tailwindcss.com/docs'],
+        answer: ['**Tailwind Documentation**: https://tailwindcss.com/docs'],
         extra: [
             {
                 heading: 'Why I think it is well done',
                 points: [
-                    'Clear organization: The documentation is well structured, making it easy to quickly locate utilities, components, and configuration options.',
-                    'Practical examples: It provides real-world examples that can be applied immediately in development.',
-                    'Live previews: Visual previews alongside code snippets help users understand the effect of styles without guesswork.',
-                    'Efficient search: The search function is fast and accurate, which is especially useful when working under time constraints.'
+                    '**Clear organization**: The documentation is well structured, making it easy to quickly locate utilities, components, and configuration options.',
+                    '**Practical examples**: It provides real-world examples that can be applied immediately in development.',
+                    '**Live previews**: Visual previews alongside code snippets help users understand the effect of styles without guesswork.',
+                    '**Efficient search**: The search function is fast and accurate, which is especially useful when working under time constraints.'
                 ]
             }
         ]
@@ -99,8 +99,8 @@ const qna = [
         question:
             'Explain what you think are two major challenges around DNS configuration for less-technical customers hosting websites.',
         answer: [
-            'Two major challenges for less-technical customers are understanding DNS terminology and knowing which records to modify. Concepts such as A records, CNAMEs, nameservers, and propagation are not intuitive for users without a technical background. Many customers are unsure whether they should update nameservers at the registrar or edit individual DNS records at the hosting provider, which can lead to incorrect changes and website downtime.',
-            'Another challenge is the delay caused by DNS propagation and caching. After making changes, users often expect immediate results, but DNS updates can take time to spread across the internet. During this period, the site may appear to work on some networks but not others, which can be confusing and frustrating. Without understanding this behavior, customers may repeatedly change settings, unintentionally creating additional issues.'
+            '**Technical Complexity**: DNS concepts and terminology are confusing for non-technical users, making it difficult to determine the correct records to modify or whether changes should be made at the registrar or hosting provider.',
+            '**Risk of Downtime from Small Errors**: A single incorrect change can disrupt websites, email services, or domain connectivity. Because the effects are not always immediately obvious, users may make additional changes that compound the problem.'
         ],
         extra: []
     },
@@ -120,7 +120,7 @@ const qna = [
             {
                 heading: 'Customer-facing first response',
                 isResponse: true,
-                text: `Hi there — thanks for reaching out. I checked the build logs and I'm seeing the build stops with "Build script returned non-zero exit code: 2." That message is a general "the build command failed" indicator, so the key detail will be the specific error a few lines above that summary in the logs.
+                text: `Hi there! Thanks for reaching out. I checked the build logs and I'm seeing the build stops with "Build script returned non-zero exit code: 2." That message is a general "the build command failed" indicator, so the key detail will be the specific error a few lines above that summary in the logs.
 
 To help you quickly, could you please reply with:
 • The build command you're using (e.g., npm run build) and your expected publish/output directory
@@ -170,8 +170,7 @@ npm run build`
         question:
             'Please attempt to deploy a function on our service. Describe what you experienced and how you attempted to troubleshoot any issues.',
         answer: [
-            'I attempted to deploy a simple "Hello World" Netlify Function in my Next.js project by adding a function file under netlify/functions/hello.js and configuring the functions directory via netlify.toml.',
-            'My goal was to validate it locally using netlify dev and then push to GitHub to trigger a Netlify deploy.'
+            'I deployed a simple "Hello World" Netlify Function in my Next.js project by adding a function file under **netlify/functions/hello.js** and configuring the functions directory via **netlify.toml**.',
         ],
         extra: [
             {
@@ -186,7 +185,7 @@ npm run build`
                     'I verified the function folder structure (netlify/functions) and ensured the function endpoint path should be /.netlify/functions/hello.',
                     'I checked my Netlify project linking/status and confirmed I was running commands from the project root.',
                     'I reviewed the build settings/config (functions directory and framework detection) and re-ran netlify dev after reinstalling dependencies.',
-                    'Since the repository was already connected to Netlify, I proceeded with pushing changes to GitHub to let Netlify build and deploy.'
+                    'Since the repository was already connected to Netlify, I proceeded with pushing changes to GitHub to let Netlify build and deploy. And it worked!'
                 ]
             }
         ]
@@ -212,7 +211,7 @@ npm run build`
                 isResponse: true,
                 text: `Thank you for bringing this to our attention. We take security reports extremely seriously, and our security team has been notified and is actively investigating the issue you described.
 
-We appreciate the information you've already provided. If you have any additional details — such as reproduction steps, timestamps, affected URLs, or proof-of-concept materials — they would help us assess the situation more quickly.
+We appreciate the information you've already provided. If you have any additional details such as reproduction steps, timestamps, affected URLs, or proof-of-concept materials, they would help us assess the situation more quickly.
 
 While we're unable to confirm specifics until the investigation is complete, please be assured that protecting our users and systems is a top priority. We will follow up as soon as we have meaningful updates to share.
 
@@ -221,9 +220,8 @@ Thank you again for reporting this responsibly.`
             {
                 heading: 'Escalation approach',
                 points: [
-                    'Escalate immediately to the internal security/incident response team and relevant engineering leadership.',
+                    'Escalate immediately to the internal security/incident response team and relevant supervisors.',
                     'Classify the report as a potential high-severity incident and follow established incident response procedures.',
-                    'Ensure key stakeholders are notified so mitigation can begin quickly if the issue is confirmed.',
                     'Maintain a clear communication channel with the reporter while protecting sensitive details.'
                 ]
             }
@@ -235,13 +233,12 @@ export default function HomePage() {
     return (
         <main className="w-full py-8">
             {/* Intro */}
-            <section className="mb-12 text-center">
+            <section className="mb-30 text-center">
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
                     Thrive Source Assessment
                 </h1>
                 <p className="mx-auto mt-4 max-w-2xl text-lg text-blue-200">
-                    Hi, I&apos;m <span className="font-semibold text-white">Giewen Pinlac</span> and
-                    this is my web development tech support assessment for Thrive Source.
+                    Hi, I&apos;m <span className="font-semibold text-white">Giewen Pinlac</span>. This website presents my completed assessment for the Web Development Tech Support role at ThriveSource.
                 </p>
             </section>
 
@@ -255,9 +252,24 @@ export default function HomePage() {
     );
 }
 
+function BoldText({ text }) {
+    const parts = text.split(/(\*\*.*?\*\*)/g);
+    return (
+        <>
+            {parts.map((part, i) =>
+                part.startsWith('**') && part.endsWith('**') ? (
+                    <strong key={i} className="font-semibold text-white">{part.slice(2, -2)}</strong>
+                ) : (
+                    part
+                )
+            )}
+        </>
+    );
+}
+
 function QACard({ item }) {
     return (
-        <div className="rounded-lg border border-blue-700/50 bg-blue-800/40 p-6">
+        <div className="rounded-lg border border-blue-700/50 bg-blue-800/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/70 hover:bg-blue-800/60 hover:shadow-lg hover:shadow-blue-900/40">
             {/* Question */}
             <div className="mb-4 flex items-start gap-3">
                 <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold">
@@ -272,7 +284,7 @@ function QACard({ item }) {
                     {item.answer.map((point, i) => (
                         <li key={i} className="flex items-start gap-2">
                             <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
-                            <span>{point}</span>
+                            <span><BoldText text={point} /></span>
                         </li>
                     ))}
                 </ul>
@@ -306,7 +318,7 @@ function QACard({ item }) {
                             {section.points.map((pt, j) => (
                                 <li key={j} className="flex items-start gap-2">
                                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-blue-400" />
-                                    <span>{pt}</span>
+                                    <span><BoldText text={pt} /></span>
                                 </li>
                             ))}
                         </ul>
